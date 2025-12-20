@@ -1,27 +1,33 @@
 import Image from "next/image";
-import displayImg from "../public/utils/display-img.jpg"
 import Link from "next/link";
 
 export function BlogBasicCard(){
     return (
-        <div className="flex flex-col gap-y-3 cursor-pointer">
-          <div className="relative">
-            <Image src={displayImg} alt="blog-img" />
-            <span className="absolute right-1.5 top-1.5 bg-theme/75 text-white font-semibold text-sm px-3 py-2 rounded-lg">Learn</span>
+        <article className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs">
+          <img alt="" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&amp;fit=crop&amp;q=80&amp;w=1160" className="h-56 w-full object-cover" />
+
+          <div className="p-4 sm:p-6">
+            <a href="#">
+              <h3 className="text-lg font-medium text-gray-900">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h3>
+            </a>
+
+            <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
+              pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis
+              quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius
+              atque dignissimos. Molestias explicabo corporis voluptatem?
+            </p>
+
+            <Link href="/learn/this-is-a-test-content" className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-theme">
+              Find out more
+
+              <span aria-hidden="true" className="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                →
+              </span>
+            </Link>
           </div>
-          <h1 className="text-xl font-bold text-gray-900">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, dolor.</h1>
-          <p className="text-gray-600 truncate">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nostrum perferendis...</p>
-          <ul className="flex gap-4 items-start">
-            <li className="text-xs font-semibold bg-gray-300 rounded-full px-2.5 py-1.5 text-gray-900">Tag 1</li>
-            <li className="text-xs font-semibold bg-gray-300 rounded-full px-2.5 py-1.5 text-gray-900">Tag 1</li>
-            <li className="text-xs font-semibold bg-gray-300 rounded-full px-2.5 py-1.5 text-gray-900">Tag 1</li>
-            <li className="text-xs font-semibold bg-gray-300 rounded-full px-2.5 py-1.5 text-gray-900">Tag 1</li>
-            <li className="text-xs font-semibold bg-gray-300 rounded-full px-2.5 py-1.5 text-gray-900">Tag 1</li>
-          </ul>
-          <Link href="#" className="cursor-pointer flex items-center self-end gap-x-1">
-            <span className="text-theme font-semibold">Read More</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" className="size-5 fill-theme"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
-          </Link>
-        </div>
+        </article>
     )
 }

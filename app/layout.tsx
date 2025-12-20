@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
+import { BasicFooter } from "@/components/footer";
+import { MainHeader } from "@/components/header";
 
 const ralewaySans = Raleway({
   subsets: ["latin"],
@@ -21,7 +23,9 @@ export default function RootLayout({
       <body
         className={`${ralewaySans.className} antialiased selection:bg-theme selection:text-gray-50`}
       >
+        <MainHeader />
         {children}
+        <BasicFooter />
       </body>
     </html>
   );
