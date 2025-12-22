@@ -4,9 +4,6 @@ import createMDX from '@next/mdx'
 const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
-  turbopack: {
-    resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
-  },
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   images: {
     unoptimized: true
@@ -15,6 +12,7 @@ const nextConfig: NextConfig = {
 
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
+  extension: /\.(md|mdx)$/,
 })
 
 export default withMDX(nextConfig);
