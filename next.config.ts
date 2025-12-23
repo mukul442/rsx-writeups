@@ -3,17 +3,15 @@ import createMDX from '@next/mdx'
 
 const nextConfig: NextConfig = {
   /* config options here */
-  // turbopack: {
-  //   rules: {
-  //     '*.mdx': {
-  //       loaders: ['@mdx-js/loader']
-  //     }
-  //   }
-  // },
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  experimental: {
-    mdxRs: true
+  turbopack: {
+    rules: {
+      '*.mdx': {
+        loaders: ['@mdx-js/loader'],
+        as: "*.js"
+      }
+    }
   },
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   output: 'export',
   images: {
     unoptimized: true
@@ -22,7 +20,7 @@ const nextConfig: NextConfig = {
 
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
-  extension: /\.(md|mdx)$/,
+  // extension: /\.(md|mdx)$/,
 })
 
 export default withMDX(nextConfig);
