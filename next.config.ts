@@ -3,7 +3,17 @@ import createMDX from '@next/mdx'
 
 const nextConfig: NextConfig = {
   /* config options here */
+  // turbopack: {
+  //   rules: {
+  //     '*.mdx': {
+  //       loaders: ['@mdx-js/loader']
+  //     }
+  //   }
+  // },
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  experimental: {
+    mdxRs: true
+  },
   output: 'export',
   images: {
     unoptimized: true
