@@ -1,4 +1,4 @@
-import Welcome from "@/markdowns/welcome.md";
+import Welcome from "@/markdowns/welcome.mdx";
 
 function CustomH1({ children }: {children: any}) {
   return <h1 style={{ color: 'blue', fontSize: '100px' }}>{children}</h1>
