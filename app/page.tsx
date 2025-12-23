@@ -10,6 +10,7 @@ export default function Home() {
         <BlogBasicCard />
         <BlogBasicCard />
         <BlogBasicCard />
+        <BlogBasicCard />
       </div>
   );
 }
