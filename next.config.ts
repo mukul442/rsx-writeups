@@ -12,6 +12,17 @@ const nextConfig: NextConfig = {
   //   }
   // },
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  turbopack: {
+    resolveExtensions: [
+      ".mdx",
+      ".tsx",
+      ".ts",
+      ".jsx",
+      ".js",
+      ".mjs",
+      ".json",
+    ],
+  },
   experimental: {
     mdxRs: true
   },
